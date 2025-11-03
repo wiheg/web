@@ -1,0 +1,28 @@
+.c1 {
+    color: orange;
+    letter-spacing: 17px;
+    word-spacing: 5px;
+}
+.c2 {
+    color: gray;
+    letter-spacing: 15px;
+    text-decoration: underline;
+}
+.c3 {
+    text-align: center;
+    word-spacing: 10px;
+    color: #ff3366;
+}
+.c4 {
+    color: red;
+    text-align: right;
+    text-transform: lowercase;
+    letter-spacing: 6px;
+}
+.c5 {
+    color: green;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
