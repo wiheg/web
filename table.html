@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 800px;
+        }
+
+        th, td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        thead th {
+            text-align: left;
+        }
+
+        tfoot td {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #c8c8c8;
+        }
+
+        td:nth-child(2), td:nth-child(3) {
+            text-align: right;
+        }
+
+        .title {
+            font-weight: bold;
+            text-align: left;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption class="title">Чек</caption>
+    <thead>
+    <tr>
+        <th>Товар</th>
+        <th>Кол-во</th>
+        <th>Цена, ₽</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>товар 1</td>
+        <td>1</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>товар 2</td>
+        <td>10</td>
+        <td>38</td>
+    </tr>
+    <tr>
+        <td>товар 3</td>
+        <td>4</td>
+        <td>99</td>
+    </tr>
+    <tr>
+        <td>товар 4</td>
+        <td>3</td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <td>товар 5</td>
+        <td>1</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>товар 6</td>
+        <td>7</td>
+        <td>777</td>
+    </tr>
+    <tr>
+        <td>товар 7</td>
+        <td>6</td>
+        <td>9</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3">Итого: 8375₽</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

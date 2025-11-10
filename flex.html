@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .buttons button {
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            border: 1px solid gray;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<h1>выбор элементов из хтмл</h1>
+<div class="buttons">
+    <button onclick="higlightByID()">getElementById()</button>
+    <button onclick="higlightByClass()">getElementByClassName()</button>
+    <button onclick="higlightByTag()">getElementByTagName()</button>
+    <button onclick="higlightBySelector()">querySelector()</button>
+    <button onclick="higlightBySelectorAll()">querySelectorAll()</button>
+    <button onclick="clearHighlights()">clearHighlights()</button>
+</div>
+<div class="container">
+    <div id="unique" class="box">ID: unique</div>
+    <div class="special box">Class: special</div>
+    <div class="special box">Class: special</div>
+    <div class="box">Tag: div</div>
+    <p class="box">Tag: p</p>
+    <div class="box" data-info="selector">[data-info="selector"]</div>
+</div>
+<script>
+    function clearHighlights() {
+        document.querySelectorAll(".highlight").forEach(el => el.classList.remove("highlight"));
+    }
+
+    function higlightByID() {
+        clearHighlights();
+        const element = document.getElementById("unique");
+        element.classList.add("highlight");
+    }
+
+    function higlightByClass() {
+        clearHighlights();
+        const elements = document.getElementsByClassName("special");
+        for (let el of elements) {
+            el.classList.add("highlight");
+        }
+    }
+
+    function higlightByTag() {
+        clearHighlights();
+        const elements = document.getElementsByTagName("p");
+        for (let el of elements) {
+            el.classList.add("highlight");
+        }
+    }
+
+    function higlightBySelector() {
+        clearHighlights();
+        const element = document.querySelector("[data-info='selector']");
+        element.classList.add("highlight");
+    }
+
+    function higlightBySelectorAll() {
+        clearHighlights();
+        const elements = document.querySelectorAll(".box");
+        elements.forEach(el => el.classList.add("highlight"));
+        /*for (let el of elements) {
+            el.classList.add("highlight");
+        }*/
+    }
+</script>
+</body>
+</html>
